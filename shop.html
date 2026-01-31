@@ -2,97 +2,234 @@
 <html lang="de">
 <head>
     <meta charset="UTF-8">
-    <title>Shop</title>
-    <link rel="stylesheet" href="style.css">
+    <title>HappyMC – Ränge Shop</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+            color: #fff;
+        }
+
+        header {
+            background: #111;
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+        }
+
+        header h1 {
+            margin: 0;
+            color: #00ffcc;
+        }
+
+        nav a {
+            color: #ccc;
+            margin: 0 15px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            color: #00ffcc;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 40px auto;
+            padding: 20px;
+        }
+
+        .shop-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 25px;
+        }
+
+        .rank {
+            background: rgba(0,0,0,0.6);
+            border-radius: 15px;
+            padding: 20px;
+            text-align: center;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .rank:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 25px rgba(0,255,204,0.4);
+        }
+
+        .rank img {
+            width: 100%;
+            border-radius: 10px;
+            margin-bottom: 15px;
+        }
+
+        .rank h3 {
+            margin: 10px 0;
+            color: #00ffcc;
+        }
+
+        .price {
+            font-size: 22px;
+            margin: 10px 0;
+            font-weight: bold;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+            text-align: left;
+        }
+
+        ul li::before {
+            content: "✔ ";
+            color: #00ffcc;
+        }
+
+        button {
+            margin-top: 15px;
+            padding: 12px 25px;
+            border: none;
+            border-radius: 25px;
+            background: #00ffcc;
+            color: #000;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        button:hover {
+            background: #00ccaa;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 40px;
+            opacity: 0.8;
+        }
+    </style>
 </head>
+
 <body>
 
 <header>
-    <h1>Server Shop</h1>
+    <h1>HappyMC Server Shop</h1>
     <nav>
-        <a href="index.html">Home</a>
-        <a href="vote.html">Vote</a>
-        <a href="wiki.html">Wiki</a>
-        <a href="login.html">Login</a>
+        <a href="#">Home</a>
+        <a href="#">Vote</a>
+        <a href="#">Wiki</a>
+        <a href="#">Login</a>
     </nav>
 </header>
 
 <div class="container">
-    <h2>Ränge kaufen</h2>
+    <h2>💎 Ränge kaufen</h2>
 
-        <p>
-        <li>VIP</li>
-        <li>1.99€</li>
+    <div class="shop-grid">
 
-        <button>BUY</button>
+        <div class="rank">
+            <img src="https://i.imgur.com/1ZQZ1Zm.png">
+            <h3>VIP</h3>
+            <div class="price">1,99€</div>
+            <ul>
+                <li>VIP Chat Prefix</li>
+                <li>/fly im Spawn</li>
+                <li>Extra Homes</li>
+            </ul>
+            <button>Kaufen</button>
+        </div>
 
-        -----------------------------------
+        <div class="rank">
+            <img src="https://i.imgur.com/M4Z7k9N.png">
+            <h3>VIP+</h3>
+            <div class="price">4,99€</div>
+            <ul>
+                <li>Alle VIP Vorteile</li>
+                <li>/nick</li>
+                <li>Mehr Kits</li>
+            </ul>
+            <button>Kaufen</button>
+        </div>
 
-            <p>
-        <li>VIP+</li>
-        <li>4.99€</li>
+        <div class="rank">
+            <img src="https://i.imgur.com/c1Y0Z9y.png">
+            <h3>MVP</h3>
+            <div class="price">9,99€</div>
+            <ul>
+                <li>Alle VIP+ Vorteile</li>
+                <li>/enderchest</li>
+                <li>Partikel Effekte</li>
+            </ul>
+            <button>Kaufen</button>
+        </div>
 
-        <button>BUY</button>
+        <div class="rank">
+            <img src="https://i.imgur.com/6Qb4JvF.png">
+            <h3>MVP+</h3>
+            <div class="price">19,99€</div>
+            <ul>
+                <li>Unbegrenzte Homes</li>
+                <li>/heal</li>
+                <li>Exklusive Cosmetics</li>
+            </ul>
+            <button>Kaufen</button>
+        </div>
 
-        -----------------------------------
+        <div class="rank">
+            <img src="https://i.imgur.com/B2ZcQzH.png">
+            <h3>UNREAL</h3>
+            <div class="price">39,99€</div>
+            <ul>
+                <li>Global Fly außer PvP</li>
+                <li>Eigene Partikel</li>
+            </ul>
+            <button>Kaufen</button>
+        </div>
 
-            <p>
-        <li>MVP</li>
-        <li>9.99€</li>
+        <div class="rank">
+            <img src="https://i.imgur.com/Y2d7GzK.png">
+            <h3>UNREAL+</h3>
+            <div class="price">49,99€</div>
+            <ul>
+                <li>Unbegrenzte Fly Zeit</li>
+                <li>Server Booster</li>
+                <li>Private Lobby</li>
+            </ul>
+            <button>Kaufen</button>
+        </div>
 
-        <button>BUY</button>
+        <div class="rank">
+            <img src="https://i.imgur.com/9wH1Z1S.png">
+            <h3>HAPPY</h3>
+            <div class="price">79,99€</div>
+            <ul>
+                <li>Ein Item Admin gestalten</li>
+                <li>Einen eigenen Event pro Monat</li>
+                <li>Goldenes Prefix</li>
+            </ul>
+            <button>Kaufen</button>
+        </div>
 
-        -----------------------------------
+        <div class="rank">
+            <img src="https://i.imgur.com/xn3qQbZ.png">
+            <h3>HAPPY+</h3>
+            <div class="price">99,99€</div>
+            <ul>
+                <li>Alles freigeschaltet</li>
+                <li>10 OP Crate pro Monat</li>
+                <li>HappyMC Battelpass Plus</li>
+            </ul>
+            <button>Kaufen</button>
+        </div>
 
-            <p>
-        <li>MVP+</li>
-        <li>19.99€</li>
+    </div>
 
-        <button>BUY</button>
-
-        -----------------------------------
-
-            <p>
-        <li>UNREAL</li>
-        <li>39.99€</li>
-
-        <button>BUY</button>
-
-        -----------------------------------
-
-            <p>
-        <li>UNREAL+</li>
-        <li>49.99€</li>
-
-        <button>BUY</button>
-
-        -----------------------------------
-
-            <p>
-        <li>HAPPY</li>
-        <li>79.99€</li>
-        <button>BUY</button>
-
-        -----------------------------------
-
-            <p>
-        <li>HAPPY+</li>
-        <li>99.99€</li>
-
-        <button>BUY</button>
-
-        -----------------------------------
-
-        
-
-        
-
-        
-    <p>
-        Nach dem Kauf wird der Rang automatisch auf dem Server vergeben.
-    </p>
-
-    <button>Kaufen (Plugin folgt)</button>
+    <footer>
+        <p>Nach dem Kauf wird der Rang automatisch auf dem Server vergeben.</p>
+        <p>HappyMC © 2026</p>
+    </footer>
 </div>
 
 </body>
